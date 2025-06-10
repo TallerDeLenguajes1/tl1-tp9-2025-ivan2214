@@ -43,7 +43,9 @@ class Program
             foreach (string archivo in archivos)
             {
                 string archivoNombre = Path.GetFileName(archivo);
-                Console.WriteLine($"- {archivoNombre}");
+                double tamKb = (double)new FileInfo(archivo).Length / 1024;
+
+                Console.WriteLine($"- {archivoNombre} tamaño: ({tamKb} KB)");
             }
         }
 
